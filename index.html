@@ -90,6 +90,8 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
 .courses{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
 .courses li{margin:0;max-width:none;border:1px solid var(--line);border-radius:3px;padding:.2rem .75rem;font-size:.92rem}
 .lede.first{margin-bottom:1rem}
+.plinks{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin:.75rem 0 0;font-weight:600;font-size:.95rem}
+.proj .courses{margin-top:1rem}
 </style>
 </head>
 <body>
@@ -212,6 +214,27 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
     <section id="projects">
       <h2>Projects</h2>
       <div class="proj">
+        <div class="meta">Data engineering<br>BigQuery ML, GCP</div>
+        <div>
+          <h3>Real-time climate forecasting pipeline</h3>
+          <ul>
+            <li>Built an end-to-end automated pipeline that ingests hourly weather data for Buenos Aires from the Open-Meteo API into BigQuery.</li>
+            <li>Trained a BQML ARIMA_PLUS time-series model to forecast temperature hour by hour.</li>
+            <li>Deployed self-retraining through scheduled queries, with predictions surfaced in Looker Studio.</li>
+          </ul>
+          <ul class="courses">
+            <li>BigQuery ML</li>
+            <li>ARIMA_PLUS</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>Looker Studio</li>
+            <li>GCP</li>
+            <li>Open-Meteo API</li>
+          </ul>
+          <p class="plinks"><a href="https://datastudio.google.com/u/0/reporting/4654af6c-d25a-4359-95fe-3545373c6d39/page/1xZU" target="_blank" rel="noopener">Live dashboard</a></p>
+        </div>
+      </div>
+      <div class="proj">
         <div class="meta">Optimization<br>Geospatial data, graph theory</div>
         <div>
           <h3>Urban mobility optimization: strategic hubs in Buenos Aires</h3>
@@ -219,6 +242,7 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
             <li>Designed a location-allocation model with K-Means clustering on geospatial data to reduce projected ETA and guide resource allocation for market expansion.</li>
             <li>Used graph theory to find critical nodes in urban infrastructure for fleet rebalancing.</li>
           </ul>
+          <p class="plinks"><a href="https://github.com/mgangui/Urban-Mobility-Optimization" target="_blank" rel="noopener">Repository</a></p>
         </div>
       </div>
       <div class="proj">
@@ -229,6 +253,7 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
             <li>Built a hierarchical inference model in R/Stan to predict market values for 8,000+ players.</li>
             <li>Added quantified uncertainty metrics to forecast when careers peak.</li>
           </ul>
+          <p class="plinks"><a href="https://github.com/MatiMoran/EstimacionBayesiana/blob/master/Entregables/TP/futbol/Presentacion/TP%20Final%20Estimacion%20Bayesiana.pdf" target="_blank" rel="noopener">Final presentation (PDF)</a></p>
         </div>
       </div>
       <div class="proj">
@@ -239,6 +264,7 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
             <li>Trained decision tree models in Python to predict mass layoff trends in the industry.</li>
             <li>Built interactive Tableau dashboards to present the findings.</li>
           </ul>
+          <p class="plinks"><a href="https://github.com/mgangui/Layoffs_project" target="_blank" rel="noopener">Repository</a><a href="https://public.tableau.com/app/profile/matias.gangui/viz/Layoffs_17166742173280/Dashboard1" target="_blank" rel="noopener">Tableau dashboard</a></p>
         </div>
       </div>
       <div class="proj">
@@ -249,6 +275,7 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
             <li>Used PCA to reduce dimensionality and segment complex datasets.</li>
             <li>Classified wine varieties into three segments to drive personalized recommendations.</li>
           </ul>
+          <p class="plinks"><a href="https://github.com/mgangui/ALC/tree/main" target="_blank" rel="noopener">Repository</a></p>
         </div>
       </div>
     </section>
