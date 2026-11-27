@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matías Gangui – Data & AI Engineer</title>
+<meta name="description" content="Data & AI Engineer in Buenos Aires. Cloud data pipelines, QA/QE testing frameworks, BI cubes and Bayesian modeling.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F7; --ink:#101B2C; --muted:#4D5B70; --line:#C9D1DC; --accent:#1B5FD1; --wash:rgba(27,95,209,.14);
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Public Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0D141D;--ink:#E7ECF3;--muted:#9AA8BA;--line:#27344A;--accent:#7FB0FF;--wash:rgba(127,176,255,.18);color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0D141D;--ink:#E7ECF3;--muted:#9AA8BA;--line:#27344A;--accent:#7FB0FF;--wash:rgba(127,176,255,.18);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font-size:.95rem}
+header.top nav{display:flex;gap:1.5rem}
+header.top a{color:var(--ink);text-decoration:none}
+header.top a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center;padding:4rem 0 4.5rem;border-bottom:1px solid var(--line)}
+h1{font:700 clamp(2.8rem,7vw,5.2rem)/.98 var(--head);letter-spacing:-.03em;margin:0 0 1.25rem}
+.role{font:500 1.35rem/1.3 var(--head);margin:0 0 1rem}
+.lede{color:var(--muted);max-width:34rem;margin:0 0 1.75rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;border-radius:3px}
+.btn.fill{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent);background:var(--accent);color:var(--bg)}
+figure{margin:0}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:.5rem}
+.curve{width:100%;height:auto;display:block}
+.curve .axis{stroke:var(--line);stroke-width:2}
+.curve .area{fill:var(--wash)}
+.curve .line{fill:none;stroke:var(--accent);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.2s ease-out .2s forwards}
+.curve .tick{stroke:var(--accent);stroke-width:2;stroke-dasharray:4 5}
+.curve text{fill:var(--muted);font:500 12px var(--body)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.curve .line{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+h2{font:700 1.9rem/1.1 var(--head);letter-spacing:-.02em;margin:0 0 2rem}
+.job,.proj,.edu{display:grid;grid-template-columns:12rem 1fr;gap:1.5rem;margin-bottom:2.5rem}
+.job:last-child,.proj:last-child,.edu:last-child{margin-bottom:0}
+.meta{color:var(--muted);font-size:.95rem}
+.meta strong{display:block;color:var(--ink);font-weight:600}
+h3{font:700 1.25rem/1.25 var(--head);margin:0 0 .15rem}
+.sub{color:var(--muted);margin:0 0 .75rem}
+ul{margin:0;padding-left:1.1rem}
+li{margin-bottom:.5rem;max-width:46rem}
+li::marker{color:var(--accent)}
+dl{display:grid;grid-template-columns:12rem 1fr;gap:.9rem 1.5rem;margin:0}
+dt{font-weight:600}
+dd{margin:0;color:var(--muted)}
+.contact p{max-width:34rem;margin:0 0 1.25rem}
+.links{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;font-weight:600}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding:2.5rem 0 3rem}
+  .job,.proj,.edu,dl{grid-template-columns:1fr;gap:.4rem}
+  dl{gap:.2rem}dd{margin-bottom:.8rem}
+  header.top nav{gap:1rem}
+}
+
+/* interactive additions */
+html{scroll-padding-top:4.5rem}
+.bar{position:fixed;top:0;left:0;width:100%;height:3px;background:var(--accent);transform-origin:left;transform:scaleX(0);z-index:20}
+header.top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:.4rem 1rem}
+header.top nav{flex-wrap:wrap;align-items:center;gap:.4rem 1.25rem}
+header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.tbtn{font:600 .9rem var(--body);color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:3px;padding:.35rem .75rem;cursor:pointer}
+.tbtn:hover{border-color:var(--accent);color:var(--accent)}
+.ctl{margin-top:1rem}
+.ctl label{display:flex;justify-content:space-between;font-weight:600;font-size:.95rem}
+.ctl output{color:var(--accent);font-variant-numeric:tabular-nums}
+.ctl input{width:100%;accent-color:var(--accent);margin:.35rem 0 0;cursor:pointer}
+.links{align-items:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="bar" id="bar" aria-hidden="true"></div>
+<div class="wrap">
+  <header class="top">
+    <strong>Matías Gangui</strong>
+    <nav aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button type="button" class="tbtn" id="theme">Dark mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Matías Gangui</h1>
+        <p class="role">Data &amp; AI Engineer</p>
+        <p class="lede">I build cloud data pipelines, automated QA/QE testing frameworks and BI cubes, and I use agentic AI to migrate pipelines faster. Based in Buenos Aires, working remotely with enterprise clients in the USA. Studying Data Science at UBA.</p>
+        <div class="cta">
+          <a class="btn fill" href="#contact">Get in touch</a>
+          <a class="btn" href="CV_Matias_Gangui_-_English.pdf">Download CV</a>
+        </div>
+      </div>
+      <figure>
+        <svg class="curve" viewBox="0 0 420 250" role="img" aria-labelledby="post-t">
+          <title id="post-t">A posterior distribution that narrows around the true value as the number of observations grows</title>
+          <defs><clipPath id="ci"><rect id="ci-rect" x="140" y="0" width="145" height="250"/></clipPath></defs>
+          <path id="p-area" class="area" clip-path="url(#ci)" d=""/>
+          <line class="axis" x1="20" y1="220" x2="400" y2="220"/>
+          <line class="tick" x1="245" y1="30" x2="245" y2="220"/>
+          <path id="p-line" class="line" pathLength="1" d=""/>
+          <text x="245" y="20" text-anchor="middle">true value</text>
+        </svg>
+        <div class="ctl">
+          <label for="n">Observations seen <output id="n-out" for="n">8</output></label>
+          <input id="n" type="range" min="1" max="60" value="8">
+        </div>
+        <figcaption>Drag the slider. With more data, the posterior narrows and its shaded 90% range tightens around the true value. It’s the idea behind my football-prices model.</figcaption>
+      </figure>
+    </div>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="job">
+        <div class="meta"><strong>Oct 2025 – present</strong>Baufest for Chipotle, remote (USA)</div>
+        <div>
+          <h3>Data Engineer / QA &amp; QE Tester</h3>
+          <p class="sub">Azure Data Factory, Snowflake, Microsoft Fabric, Power BI</p>
+          <ul>
+            <li>Led end-to-end pipeline migrations to Azure Data Factory, using agentic AI workflows and prompt engineering (Claude) to automate code transformation and speed up migration.</li>
+            <li>Introduced GenAI best practices across the team with centralized SKILLS.md files and structured Markdown context templates that define roles, system boundaries and context windows for AI agents.</li>
+            <li>Implemented automated QA/QE frameworks with systematic regression tests across data pipelines and reporting cubes.</li>
+            <li>Managed, optimized and validated OLAP cubes and semantic models for enterprise reporting.</li>
+            <li>Automated data validation between Snowflake, Microsoft Fabric and Power BI, keeping metrics consistent across executive dashboards.</li>
+            <li>Optimized production pipelines in Snowflake and ADF, cutting query latency, operational costs and manual QA effort.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="meta"><strong>Feb 2025 – Oct 2025</strong>Baufest for Les Schwab, remote (USA)</div>
+        <div>
+          <h3>Data Analyst</h3>
+          <p class="sub">Power BI, Tableau, Snowflake</p>
+          <ul>
+            <li>Proposed and led data-driven customer acquisition strategies, tracking campaign performance and behavior changes in Power BI dashboards. Result: a 10% revenue increase.</li>
+            <li>Migrated enterprise dashboards and reporting from Tableau to Power BI, improving report load times and standardizing visuals.</li>
+            <li>Automated recurring reports and ran ad-hoc analysis in Snowflake, reducing manual operational work by 30% and surfacing cost-saving opportunities.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="proj">
+        <div class="meta">Optimization<br>Geospatial data, graph theory</div>
+        <div>
+          <h3>Urban mobility optimization: strategic hubs in Buenos Aires</h3>
+          <ul>
+            <li>Designed a location-allocation model with K-Means clustering on geospatial data to reduce projected ETA and guide resource allocation for market expansion.</li>
+            <li>Used graph theory to find critical nodes in urban infrastructure for fleet rebalancing.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="proj">
+        <div class="meta">Bayesian statistics<br>R, Stan</div>
+        <div>
+          <h3>Hierarchical Bayesian estimation of football market prices</h3>
+          <ul>
+            <li>Built a hierarchical inference model in R/Stan to predict market values for 8,000+ players.</li>
+            <li>Added quantified uncertainty metrics to forecast when careers peak.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="proj">
+        <div class="meta">Machine learning<br>Python, Tableau</div>
+        <div>
+          <h3>Layoffs prediction</h3>
+          <ul>
+            <li>Trained decision tree models in Python to predict mass layoff trends in the industry.</li>
+            <li>Built interactive Tableau dashboards to present the findings.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="proj">
+        <div class="meta">Unsupervised learning<br>Python</div>
+        <div>
+          <h3>Recommendation systems</h3>
+          <ul>
+            <li>Used PCA to reduce dimensionality and segment complex datasets.</li>
+            <li>Classified wine varieties into three segments to drive personalized recommendations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl>
+        <dt>AI engineering</dt>
+        <dd>Agentic workflows, prompt engineering (Claude, OpenAI), context window optimization, SKILLS.md template design, role prompting, LLM integration in pipelines</dd>
+        <dt>Data engineering and cloud</dt>
+        <dd>Azure Data Factory, Snowflake, Microsoft Fabric, Google Cloud Platform, ETL/ELT migration, QA/QE and regression testing</dd>
+        <dt>BI and visualization</dt>
+        <dd>Power BI, Tableau, Looker Studio, OLAP cubes and semantic models</dd>
+        <dt>Advanced analytics</dt>
+        <dd>Bayesian statistics (hierarchical models, MCMC), operations research, graph theory, machine learning</dd>
+        <dt>Languages and tools</dt>
+        <dd>Python (Pandas, NumPy, PyMC3), SQL (Snowflake, BigQuery), R, advanced Excel, Jupyter</dd>
+        <dt>Certifications</dt>
+        <dd>Azure Data Fundamentals (DP-900)</dd>
+      </dl>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu">
+        <div class="meta">2023 – 2028 (expected)</div>
+        <div>
+          <h3>University of Buenos Aires (UBA)</h3>
+          <p class="sub">BS + MSc in Data Science, GPA 8.14/10</p>
+          <p>Advanced probability and statistics, operations research, continuous modeling, algorithms and data structures, computational linear algebra, Bayesian estimation.</p>
+        </div>
+      </div>
+      <div class="edu">
+        <div class="meta">2018 – 2023</div>
+        <div>
+          <h3>University of Buenos Aires (UBA)</h3>
+          <p class="sub">BS in Computer Science, GPA 8.00/10, 60% completed</p>
+          <p>Computational statistics, digital systems.</p>
+        </div>
+      </div>
+      <div class="edu">
+        <div class="meta">2007 – 2017</div>
+        <div>
+          <h3>Lycée Franco-Argentin Jean Mermoz</h3>
+          <p class="sub">Franco-Argentine Bachelor’s Degree in Sciences, GPA 8.40/10</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>I’m open to data engineering and AI consulting work. The quickest way to reach me is email.</p>
+      <div class="links">
+        <a href="mailto:ganguimatias@gmail.com">ganguimatias@gmail.com</a>
+        <button type="button" class="tbtn" id="copy">Copy email</button>
+        <span class="sr" id="copied" role="status"></span>
+        <!-- TODO: replace # with your real LinkedIn and UpWork profile URLs -->
+        <a href="#" rel="noopener">LinkedIn</a>
+        <a href="#" rel="noopener">UpWork</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Matías Gangui · Buenos Aires, Argentina</footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement;
+
+  /* theme toggle */
+  var tb=document.getElementById('theme');
+  function mode(){return root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}
+  function label(){tb.textContent=mode()==='dark'?'Light mode':'Dark mode';}
+  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+  tb.addEventListener('click',function(){
+    var next=mode()==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    label();
+  });
+  label();
+
+  /* interactive posterior */
+  var n=document.getElementById('n'),out=document.getElementById('n-out'),
+      line=document.getElementById('p-line'),area=document.getElementById('p-area'),
+      rect=document.getElementById('ci-rect');
+  var X0=20,X1=400,BASE=220,TRUE=245,PRIOR=190;
+  function draw(){
+    var k=+n.value;out.textContent=k;
+    var sigma=70/Math.sqrt(1+k*0.35);
+    var mu=TRUE-(TRUE-PRIOR)*Math.exp(-k/12);
+    var peak=2850/sigma,d='';
+    for(var x=X0;x<=X1;x+=2){
+      var y=BASE-peak*Math.exp(-0.5*Math.pow((x-mu)/sigma,2));
+      d+=(x===X0?'M':'L')+x+' '+y.toFixed(1);
+    }
+    line.setAttribute('d',d);
+    area.setAttribute('d',d+'L'+X1+' '+BASE+'L'+X0+' '+BASE+'Z');
+    var half=1.645*sigma;
+    rect.setAttribute('x',(mu-half).toFixed(1));
+    rect.setAttribute('width',(2*half).toFixed(1));
+  }
+  n.addEventListener('input',draw);draw();
+
+  /* copy email */
+  var cb=document.getElementById('copy'),msg=document.getElementById('copied');
+  cb.addEventListener('click',function(){
+    function done(t){cb.textContent=t;msg.textContent=t;setTimeout(function(){cb.textContent='Copy email';msg.textContent='';},2200);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText('ganguimatias@gmail.com').then(function(){done('Copied');},function(){done('Copy failed. Select the address instead.');});
+    }else{done('Copy failed. Select the address instead.');}
+  });
+
+  /* active section in nav + scroll progress */
+  var links={};
+  document.querySelectorAll('header.top nav a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      Object.keys(links).forEach(function(k){links[k].removeAttribute('aria-current');});
+      if(links[e.target.id])links[e.target.id].setAttribute('aria-current','true');
+    });
+  },{rootMargin:'-35% 0px -60% 0px'});
+  document.querySelectorAll('main section[id]').forEach(function(sec){io.observe(sec);});
+  var bar=document.getElementById('bar');
+  function prog(){
+    var h=root.scrollHeight-innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(scrollY/h,1):0)+')';
+  }
+  addEventListener('scroll',prog,{passive:true});prog();
+})();
+</script>
+</body>
+</html>
