@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Matías Gangui – Data & AI Engineer</title>
-<meta name="description" content="Data & AI Engineer in Buenos Aires. Cloud data pipelines, QA/QE testing frameworks, BI cubes and Bayesian modeling.">
+<title>Matías Gangui – AI Engineer & Data Science Student</title>
+<meta name="description" content="AI Engineer and Data Science student at UBA in Buenos Aires. Bayesian modeling, operations research, machine learning and cloud data pipelines.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,6 +86,10 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
 .ctl input{width:100%;accent-color:var(--accent);margin:.35rem 0 0;cursor:pointer}
 .links{align-items:center}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.intro{max-width:44rem;margin:0 0 2rem}
+.courses{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.courses li{margin:0;max-width:none;border:1px solid var(--line);border-radius:3px;padding:.2rem .75rem;font-size:.92rem}
+.lede.first{margin-bottom:1rem}
 </style>
 </head>
 <body>
@@ -94,10 +98,10 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
   <header class="top">
     <strong>Matías Gangui</strong>
     <nav aria-label="Sections">
+      <a href="#education">Studies</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
       <button type="button" class="tbtn" id="theme">Dark mode</button>
     </nav>
@@ -107,8 +111,9 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
     <div class="hero">
       <div>
         <h1>Matías Gangui</h1>
-        <p class="role">Data &amp; AI Engineer</p>
-        <p class="lede">I build cloud data pipelines, automated QA/QE testing frameworks and BI cubes, and I use agentic AI to migrate pipelines faster. Based in Buenos Aires, working remotely with enterprise clients in the USA. Studying Data Science at UBA.</p>
+        <p class="role">AI Engineer and Data Science Student</p>
+        <p class="lede first">I genuinely enjoy discovering the story behind data through statistical analysis and machine learning, understanding patterns, operational research, and what predictive models can reveal about complex systems.</p>
+        <p class="lede">I love building models and applying advanced analytics to uncover hidden insights and translate them into actionable predictions that can make a real difference. For me, the most rewarding part is seeing how data science techniques can guide better decisions and drive innovation.</p>
         <div class="cta">
           <a class="btn fill" href="#contact">Get in touch</a>
           <a class="btn" href="CV Matias Gangui - English.pdf" download lang="en">Download CV in English</a>
@@ -133,6 +138,45 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
       </figure>
     </div>
 
+    <section id="education">
+      <h2>Studying data science at UBA</h2>
+      <p class="intro">I’m completing a BS + MSc in Data Science at the University of Buenos Aires, with a GPA of 8.14/10. My coursework centers on probability, statistics and optimization, the same toolkit behind the projects below, from operations research to machine learning.</p>
+      <div class="edu">
+        <div class="meta"><strong>2023 – 2028 (expected)</strong>University of Buenos Aires (UBA)</div>
+        <div>
+          <h3>BS + MSc in Data Science</h3>
+          <p class="sub">GPA 8.14/10</p>
+          <ul class="courses">
+            <li>Advanced probability and statistics</li>
+            <li>Bayesian estimation</li>
+            <li>Operations research and optimization</li>
+            <li>Continuous modeling</li>
+            <li>Computational linear algebra</li>
+            <li>Algorithms and data structures I, II, III</li>
+            <li>Signal processing</li>
+            <li>Graph theory</li>
+            <li>Fluid theory</li>
+            <li>Dynamic programming</li>
+          </ul>
+        </div>
+      </div>
+      <div class="edu">
+        <div class="meta"><strong>2018 – 2023</strong>University of Buenos Aires (UBA)</div>
+        <div>
+          <h3>BS in Computer Science</h3>
+          <p class="sub">GPA 8.00/10, 60% completed</p>
+          <p>Computational statistics, digital systems.</p>
+        </div>
+      </div>
+      <div class="edu">
+        <div class="meta"><strong>2007 – 2017</strong>Lycée Franco-Argentin Jean Mermoz</div>
+        <div>
+          <h3>Franco-Argentine Bachelor’s Degree in Sciences</h3>
+          <p class="sub">GPA 8.40/10</p>
+        </div>
+      </div>
+    </section>
+
     <section id="experience">
       <h2>Experience</h2>
       <div class="job">
@@ -141,7 +185,7 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
           <h3>Data Engineer / QA &amp; QE Tester</h3>
           <p class="sub">Azure Data Factory, Snowflake, Microsoft Fabric, Power BI</p>
           <ul>
-            <li>Led end-to-end pipeline migrations to Azure Data Factory, using agentic AI workflows and prompt engineering (Claude) to automate code transformation and speed up migration.</li>
+            <li>Led end-to-end pipeline migrations to Azure Data Factory, using agentic AI workflows, prompt engineering (Claude) and data engineering tools (dbt, Snowflake) to automate code transformation and speed up migration.</li>
             <li>Introduced GenAI best practices across the team with centralized SKILLS.md files and structured Markdown context templates that define roles, system boundaries and context windows for AI agents.</li>
             <li>Implemented automated QA/QE frameworks with systematic regression tests across data pipelines and reporting cubes.</li>
             <li>Managed, optimized and validated OLAP cubes and semantic models for enterprise reporting.</li>
@@ -222,48 +266,22 @@ header.top nav a[aria-current="true"]{color:var(--accent);text-decoration:underl
         <dt>Languages and tools</dt>
         <dd>Python (Pandas, NumPy, PyMC3), SQL (Snowflake, BigQuery), R, advanced Excel, Jupyter</dd>
         <dt>Certifications</dt>
-        <dd>Azure Data Fundamentals (DP-900)</dd>
+        <dd>Azure Data Fundamentals (DP-900). Claude Certified Architect certification (currently working on it).</dd>
       </dl>
     </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="edu">
-        <div class="meta">2023 – 2028 (expected)</div>
-        <div>
-          <h3>University of Buenos Aires (UBA)</h3>
-          <p class="sub">BS + MSc in Data Science, GPA 8.14/10</p>
-          <p>Advanced probability and statistics, operations research, continuous modeling, algorithms and data structures, computational linear algebra, Bayesian estimation.</p>
-        </div>
-      </div>
-      <div class="edu">
-        <div class="meta">2018 – 2023</div>
-        <div>
-          <h3>University of Buenos Aires (UBA)</h3>
-          <p class="sub">BS in Computer Science, GPA 8.00/10, 60% completed</p>
-          <p>Computational statistics, digital systems.</p>
-        </div>
-      </div>
-      <div class="edu">
-        <div class="meta">2007 – 2017</div>
-        <div>
-          <h3>Lycée Franco-Argentin Jean Mermoz</h3>
-          <p class="sub">Franco-Argentine Bachelor’s Degree in Sciences, GPA 8.40/10</p>
-        </div>
-      </div>
-    </section>
 
     <section id="contact" class="contact">
       <h2>Contact</h2>
-      <p>I’m open to data engineering and AI consulting work. The quickest way to reach me is email.</p>
+      <p>I’m open to work opportunities. The quickest way to reach me is email.</p>
       <div class="links">
         <a href="mailto:ganguimatias@gmail.com">ganguimatias@gmail.com</a>
         <button type="button" class="tbtn" id="copy">Copy email</button>
         <span class="sr" id="copied" role="status"></span>
         <a href="https://www.linkedin.com/in/matiasgangui/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.upwork.com/freelancers/~01871492960f6243cb" target="_blank" rel="noopener">UpWork</a>
-        <a href="CV_Matias_Gangui_EN.pdf" download lang="en">CV (English)</a>
-        <a href="CV_Matias_Gangui_ES.pdf" download lang="es">CV (Español)</a>
+        <a href="CV Matias Gangui - English.pdf" download lang="en">CV (English)</a>
+        <a href="CV Matias Gangui - Español.pdf" download lang="es">CV (Español)</a>
       </div>
     </section>
   </main>
