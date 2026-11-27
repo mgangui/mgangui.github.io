@@ -12,15 +12,6 @@ Personal portfolio of **Matías Gangui**, AI Engineer and Data Science student a
 - **Skills and certifications:** AI engineering, data engineering and cloud, BI, advanced analytics, languages and tools.
 - **Contact:** email, LinkedIn, UpWork and CV downloads in English and Spanish.
 
-## Features
-
-- Interactive hero chart: a slider shows how a Bayesian posterior narrows around the true value as more data comes in.
-- Light and dark themes, following the system setting, with a toggle that remembers the choice.
-- Sticky navigation that highlights the current section, plus a scroll progress bar.
-- "Copy email" button in the contact section.
-- CV downloads in English and Spanish.
-- Responsive layout, keyboard-friendly, and respects the "reduce motion" setting.
-
 ## Repository structure
 
 ```
