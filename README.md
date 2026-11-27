@@ -31,28 +31,6 @@ Personal portfolio of **Matías Gangui**, AI Engineer and Data Science student a
 └── README.md
 ```
 
-The site is a single static file with no build step and no dependencies. The only external resource is the Google Fonts stylesheet (Bricolage Grotesque and Public Sans), and the page falls back to system fonts if it can't load.
-
-## Run it locally
-
-Open `index.html` in a browser, or serve the folder:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit http://localhost:8000.
-
-## Edit the content
-
-- **Text, experience and projects:** edit the sections in `index.html` (`#education`, `#experience`, `#projects`, `#skills`, `#contact`).
-- **Colors:** change the CSS variables at the top of the `<style>` block (`--bg`, `--ink`, `--accent` and so on). The dark theme has its own values just below.
-- **CVs:** replace the two PDFs, keeping the same file names. The download buttons in `index.html` point to them.
-
-## Deploy
-
-The site is published with GitHub Pages from the `main` branch. Push a change to `index.html` or the PDFs and the site updates within a minute or two.
-
 ## Contact
 
 - Email: ganguimatias@gmail.com
